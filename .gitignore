@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+/.vs/Magicianred.WorkflowSystem/DesignTimeBuild/.dtbcache.v2
+/.vs/Magicianred.WorkflowSystem/v16/.suo
+/Magicianred.WorkflowSystem/bin/Debug/netstandard2.0
