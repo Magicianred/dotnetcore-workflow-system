@@ -105,3 +105,7 @@ dist
 /.vs/Magicianred.WorkflowSystem/DesignTimeBuild/.dtbcache.v2
 /.vs/Magicianred.WorkflowSystem/v16/.suo
 /Magicianred.WorkflowSystem/bin/Debug/netstandard2.0
+/.vs/Magicianred.WorkflowSystem/config
+/Magicianred.WorkflowSystem.Tests.Integration/obj
+/Magicianred.WorkflowSystem.Tests.Unit/bin/Debug/netcoreapp3.1
+/Magicianred.WorkflowSystem.Tests.Unit/obj

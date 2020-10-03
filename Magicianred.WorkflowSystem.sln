@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magicianred.WorkflowSystem", "Magicianred.WorkflowSystem\Magicianred.WorkflowSystem.csproj", "{A74790E6-D879-4E8E-8BC4-572CCF19E0C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicianred.WorkflowSystem.Admin", "Magicianred.WorkflowSystem.Admin\Magicianred.WorkflowSystem.Admin.csproj", "{BFA1DD1E-D0C2-4C29-9A53-7BEDB43E6422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magicianred.WorkflowSystem.Admin", "Magicianred.WorkflowSystem.Admin\Magicianred.WorkflowSystem.Admin.csproj", "{BFA1DD1E-D0C2-4C29-9A53-7BEDB43E6422}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicianred.WorkflowSystem.UnitTests", "Magicianred.WorkflowSystem.UnitTests\Magicianred.WorkflowSystem.UnitTests.csproj", "{503E19DA-C7D4-416E-8436-CA5F7FD8F129}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magicianred.WorkflowSystem.Mvc", "Magicianred.WorkflowSystem.Mvc\Magicianred.WorkflowSystem.Mvc.csproj", "{D855A58A-9A69-4D58-8750-083150FDE79F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicianred.WorkflowSystem.Mvc", "Magicianred.WorkflowSystem.Mvc\Magicianred.WorkflowSystem.Mvc.csproj", "{D855A58A-9A69-4D58-8750-083150FDE79F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicianred.WorkflowSystem.Tests.Unit", "Magicianred.WorkflowSystem.Tests.Unit\Magicianred.WorkflowSystem.Tests.Unit.csproj", "{553EA1DF-E7ED-4ABC-A9CF-406D84172E9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magicianred.WorkflowSystem.Tests.Integration", "Magicianred.WorkflowSystem.Tests.Integration\Magicianred.WorkflowSystem.Tests.Integration.csproj", "{D7E232D6-D9F4-4394-9C73-5B205EFB0A6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +27,18 @@ Global
 		{BFA1DD1E-D0C2-4C29-9A53-7BEDB43E6422}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFA1DD1E-D0C2-4C29-9A53-7BEDB43E6422}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFA1DD1E-D0C2-4C29-9A53-7BEDB43E6422}.Release|Any CPU.Build.0 = Release|Any CPU
-		{503E19DA-C7D4-416E-8436-CA5F7FD8F129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{503E19DA-C7D4-416E-8436-CA5F7FD8F129}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{503E19DA-C7D4-416E-8436-CA5F7FD8F129}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{503E19DA-C7D4-416E-8436-CA5F7FD8F129}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D855A58A-9A69-4D58-8750-083150FDE79F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D855A58A-9A69-4D58-8750-083150FDE79F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D855A58A-9A69-4D58-8750-083150FDE79F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D855A58A-9A69-4D58-8750-083150FDE79F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{553EA1DF-E7ED-4ABC-A9CF-406D84172E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{553EA1DF-E7ED-4ABC-A9CF-406D84172E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{553EA1DF-E7ED-4ABC-A9CF-406D84172E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{553EA1DF-E7ED-4ABC-A9CF-406D84172E9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7E232D6-D9F4-4394-9C73-5B205EFB0A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7E232D6-D9F4-4394-9C73-5B205EFB0A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7E232D6-D9F4-4394-9C73-5B205EFB0A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7E232D6-D9F4-4394-9C73-5B205EFB0A6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
