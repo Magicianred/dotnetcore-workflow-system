@@ -6,32 +6,51 @@ using System.Linq;
 namespace Magicianred.WorkflowSystem.Repositories
 {
     /// <summary>
-    /// Repository for the workflow
+    /// Repository for Workflow status
     /// </summary>
-    public class WorkflowRepository : IWorkflowRepository
+    public class WorkflowStatusRepository : IWorkflowStatusRepository
     {
-        private IList<IWorkflow> _store;
+        private IList<IWorkflowStatus> _store;
 
         /// <summary>
         /// Costructor
         /// </summary>
         /// <param name="context"></param>
-        public WorkflowRepository(IContext context)
+        public WorkflowStatusRepository(IContext context)
         {
-            _store = context.Workflows.ToList();
+            _store = context.WorkflowStatuses.ToList();
         }
 
         /// <summary>
-        /// Delete a workflow from the repository by id
+        /// Insert a Workflow status in the store
         /// </summary>
-        /// <param name="id">workflow id to delete</param>
+        /// <param name="workflowStatus"></param>
+        /// <returns>Id of the new Workflow status inserted</returns>
+        public int Add(IWorkflowStatus workflowStatus)
+        {
+            if (_store != null)
+            {
+                _store = new List<IWorkflowStatus>();
+            }
+
+            var newId = this.getNewId();
+            workflowStatus.Id = newId;
+
+            _store.Add(workflowStatus);
+            return newId;
+        }
+
+        /// <summary>
+        /// Delete a workflow status by id
+        /// </summary>
+        /// <param name="id">id workflow status to delete</param>
         /// <returns>True if succed, false otherwise</returns>
         public bool Delete(int id)
         {
-            if(_store != null)
+            if (_store != null)
             {
                 var toDelete = _store.Where(x => x.Id == id).FirstOrDefault();
-                if(toDelete != null)
+                if (toDelete != null)
                 {
                     _store.Remove(toDelete);
                 }
@@ -40,11 +59,11 @@ namespace Magicianred.WorkflowSystem.Repositories
         }
 
         /// <summary>
-        /// Delete a workflow from the repository
+        /// Delete a workflow status
         /// </summary>
-        /// <param name="toDelete">Workflow item to delete</param>
+        /// <param name="toDelete">workflow status to delete</param>
         /// <returns>True if succed, false otherwise</returns>
-        public bool Delete(IWorkflow toDelete)
+        public bool Delete(IWorkflowStatus toDelete)
         {
             if (_store != null)
             {
@@ -57,10 +76,10 @@ namespace Magicianred.WorkflowSystem.Repositories
         }
 
         /// <summary>
-        /// Retrieve all workflow in the repository
+        /// Retrive all workflows statuses
         /// </summary>
-        /// <returns>Return all workflows</returns>
-        public IQueryable<IWorkflow> GetAll()
+        /// <returns>All workflow statuses in the store</returns>
+        public IQueryable<IWorkflowStatus> GetAll()
         {
             if (_store != null)
             {
@@ -70,11 +89,11 @@ namespace Magicianred.WorkflowSystem.Repositories
         }
 
         /// <summary>
-        /// Obtain a workflow by id
+        /// Retrive a Workflow status by Id
         /// </summary>
-        /// <param name="id">id workflow to obtain</param>
-        /// <returns>A workflow from the repository</returns>
-        public IWorkflow GetById(int id)
+        /// <param name="id">id of the workflow</param>
+        /// <returns>a workflow</returns>
+        public IWorkflowStatus GetById(int id)
         {
             if (_store != null)
             {
@@ -84,38 +103,21 @@ namespace Magicianred.WorkflowSystem.Repositories
         }
 
         /// <summary>
-        /// Insert a new workflow item
+        /// Update a Workflow status in the store
         /// </summary>
-        /// <param name="workflow">workflow data to insert</param>
+        /// <param name="workflowStatus">A workflow status to update</param>
         /// <returns>True if succed, false otherwise</returns>
-        public int Add(IWorkflow workflow)
+        public bool Update(IWorkflowStatus workflowStatus)
         {
             if (_store != null)
             {
-                _store = new List<IWorkflow>();
-            }
-
-            var newId = this.getNewId();
-            workflow.Id = newId;
-
-            _store.Add(workflow);
-            return newId;
-        }
-
-        /// <summary>
-        /// Update a workflow item
-        /// </summary>
-        /// <param name="workflow">workflow data to update</param>
-        /// <returns>True if succed, false otherwise</returns>
-        public bool Update(IWorkflow workflow)
-        {
-            if (_store != null)
-            {
-                var toUpdate = _store.Where(x => x.Id == workflow.Id).FirstOrDefault();
+                var toUpdate = _store.Where(x => x.Id == workflowStatus.Id).FirstOrDefault();
                 if (toUpdate != null)
                 {
-                    toUpdate.EntityTypeId = workflow.EntityTypeId;
-                    toUpdate.TypeId = workflow.TypeId;
+                    toUpdate.Name = workflowStatus.Name;
+                    toUpdate.Description = workflowStatus.Description;
+                    toUpdate.WorkflowId = workflowStatus.WorkflowId;
+                    toUpdate.TypeId = workflowStatus.TypeId;
                     return true;
                 }
             }

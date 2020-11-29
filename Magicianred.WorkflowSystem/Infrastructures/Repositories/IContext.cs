@@ -1,8 +1,5 @@
 ﻿using Magicianred.WorkflowSystem.Infrastructures.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Magicianred.WorkflowSystem.Infrastructures.Repositories
 {
@@ -14,7 +11,17 @@ namespace Magicianred.WorkflowSystem.Infrastructures.Repositories
         /// <summary>
         /// Workflows in the store
         /// </summary>
-        IList<IWorkflow> Workflows { get; set; }
+        IEnumerable<IWorkflow> Workflows { get; set; }
+
+        /// <summary>
+        /// Workflow statuses in the store
+        /// </summary>
+        IEnumerable<IWorkflowStatus> WorkflowStatuses { get; set; }
+
+        /// <summary>
+        /// Workflow next statuses in the store
+        /// </summary>
+        IEnumerable<IWorkflowNextStatus> WorkflowNextStatuses { get; set; }
 
         /// <summary>
         /// Method to persist data

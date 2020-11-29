@@ -109,3 +109,4 @@ dist
 /Magicianred.WorkflowSystem.Tests.Integration/obj
 /Magicianred.WorkflowSystem.Tests.Unit/bin/Debug/netcoreapp3.1
 /Magicianred.WorkflowSystem.Tests.Unit/obj
+/Magicianred.WorkflowSystem.Tests.Integration/bin/Debug/netcoreapp3.1

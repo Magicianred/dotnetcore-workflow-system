@@ -15,7 +15,17 @@ namespace Magicianred.WorkflowSystem.Repositories
         /// <summary>
         /// A workflow store
         /// </summary>
-        public IList<IWorkflow> Workflows { get; set; }
+        public IEnumerable<IWorkflow> Workflows { get; set; }
+
+        /// <summary>
+        /// Workflow statuses in the store
+        /// </summary>
+        public IEnumerable<IWorkflowStatus> WorkflowStatuses { get; set; }
+
+        /// <summary>
+        /// Workflow next statuses in the store
+        /// </summary>
+        public IEnumerable<IWorkflowNextStatus> WorkflowNextStatuses { get; set; }
 
         /// <summary>
         /// To persist data

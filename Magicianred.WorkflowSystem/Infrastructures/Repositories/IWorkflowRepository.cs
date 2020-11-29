@@ -1,8 +1,5 @@
 ﻿using Magicianred.WorkflowSystem.Infrastructures.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Magicianred.WorkflowSystem.Infrastructures.Repositories
 {
@@ -28,13 +25,13 @@ namespace Magicianred.WorkflowSystem.Infrastructures.Repositories
         /// Insert a Workflow in the store
         /// </summary>
         /// <param name="workflow"></param>
-        /// <returns></returns>
+        /// <returns>Id of the new Workflow inserted</returns>
         int Add(IWorkflow workflow);
 
         /// <summary>
         /// Update a Workflow in the store
         /// </summary>
-        /// <param name="workflow">A workflow to insert</param>
+        /// <param name="workflow">A workflow to update</param>
         /// <returns>True if succed, false otherwise</returns>
         bool Update(IWorkflow workflow);
 
